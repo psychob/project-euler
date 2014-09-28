@@ -1,10 +1,16 @@
 solution "project euler"
- configurations "basic"
- flags { "Symbols" }
+ configurations { "debug", "release" }
  
  targetdir "./build/"
- objdir    "./build/obj/"
  location  "./projfiles/"
+ 
+ configuration "debug"
+  flags { "Symbols" }
+  objdir "./build/obj/debug/"
+  
+ configuration "release"
+  flags { "Optimize" }
+  objdir "./build/obj/release/"
  
  project "pe-001"
   kind     "ConsoleApp"
@@ -15,3 +21,8 @@ solution "project euler"
   kind     "ConsoleApp"
   language "c++"
   files  { "pe-002.cpp" }
+ 
+ project "pe-003"
+  kind     "ConsoleApp"
+  language "c++"
+  files  { "pe-003.cpp" }
