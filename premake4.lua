@@ -6,11 +6,13 @@ solution "project euler"
  
  configuration "debug"
   flags { "Symbols" }
-  objdir "./build/obj/debug/"
+  objdir "./build/obj/"
+  targetsuffix "-d"
   
  configuration "release"
   flags { "Optimize" }
-  objdir "./build/obj/release/"
+  objdir "./build/obj/"
+  targetsuffix "-r"
  
  project "pe-001"
   kind     "ConsoleApp"
@@ -41,3 +43,8 @@ solution "project euler"
   kind     "ConsoleApp"
   language "c++"
   files  { "pe-008.cpp" }
+
+ project "pe-016"
+  kind     "ConsoleApp"
+  language "c++"
+  files  { "pe-016.cpp" }
