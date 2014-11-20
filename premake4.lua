@@ -39,6 +39,11 @@ solution "project euler"
   language "c++"
   files  { "pe-006.cpp" }
  
+ project "pe-007"
+  kind     "ConsoleApp"
+  language "c++"
+  files  { "pe-007.cpp" }
+ 
  project "pe-008"
   kind     "ConsoleApp"
   language "c++"
